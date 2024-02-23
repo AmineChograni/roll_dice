@@ -21,8 +21,17 @@ class GradientContainer extends StatelessWidget {
           colors: [color1, color2, color3],
         ),
       ),
-      child: Center(
-        child: Image.asset('images/dice-1.png'),
+      child: Container(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Image.asset('images/dice-1.png', width: 100),
+            Image.asset('images/dice-2.png', width: 100),
+            Image.asset('images/dice-3.png', width: 100),
+          ],
+        ),
       ),
     );
   }
