@@ -22,35 +22,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: myCustomText('Hello world!'),
-      ),
-    );
-  }
-
-  Widget myCustomText(String msg) {
-    return Text(
-      msg,
-      style: const TextStyle(
-        color: Colors.white70,
-        //backgroundColor: Colors.amber,
-        fontSize: 30,
-        fontWeight: FontWeight.w800,
-        fontStyle: FontStyle.italic,
-        letterSpacing: -2,
-        wordSpacing: 8,
-        //height: 10,
-        shadows: [
-          Shadow(
-            color: Colors.amber,
-            offset: Offset(5, 10),
-            blurRadius: 10,
-          ),
-          Shadow(
-            color: Color.fromARGB(255, 48, 47, 47),
-            offset: Offset(-5, 10),
-            blurRadius: 10,
-          ),
-        ],
+        child: Image.asset('images/dice-1.png'),
       ),
     );
   }
