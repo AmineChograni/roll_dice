@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 Alignment startAlignment = Alignment.topLeft;
@@ -21,15 +23,16 @@ class GradientContainer extends StatelessWidget {
           colors: [color1, color2, color3],
         ),
       ),
-      child: Container(
-        width: double.infinity,
+      child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image.asset('images/dice-1.png', width: 100),
-            Image.asset('images/dice-2.png', width: 100),
-            Image.asset('images/dice-3.png', width: 100),
+            ElevatedButton.icon(
+              onPressed: () => log('Clicked!'),
+              label: const Text('Click me'),
+              icon: const Icon(Icons.ads_click),
+            )
           ],
         ),
       ),
