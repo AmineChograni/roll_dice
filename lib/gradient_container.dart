@@ -12,6 +12,10 @@ class GradientContainer extends StatelessWidget {
   final Color color2;
   final Color color3;
 
+  void rollDice() {
+    //log('The Button is clicked !');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,13 +29,17 @@ class GradientContainer extends StatelessWidget {
       ),
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset('images/dice-1.png', width: 100),
-            ElevatedButton.icon(
-              onPressed: () => log('Clicked!'),
-              label: const Text('Click me'),
-              icon: const Icon(Icons.ads_click),
+            Image.asset('images/dice-1.png', width: 200),
+            const SizedBox(height: 20),
+            TextButton(
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                textStyle: const TextStyle(fontSize: 28),
+              ),
+              onPressed: rollDice,
+              child: const Text('Roll Dice'),
             )
           ],
         ),
